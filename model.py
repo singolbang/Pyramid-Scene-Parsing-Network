@@ -82,7 +82,7 @@ class PSPN(nn.Module):
 
         x_1 = nn.Upsample(size = (h,w) , mode='bilinear', align_corners=True)(x_1)
         x_2 = nn.Upsample(size = (h,w), mode='bilinear', align_corners=True)(x_2)
-        x_3 = nn.Upsample(size= (h,w), mode='bilinear', align_corners=True)(x_3)
+        x_3 = nn.Upsample(size = (h,w), mode='bilinear', align_corners=True)(x_3)
         x_6 = nn.Upsample(size = (h,w), mode='bilinear', align_corners=True)(x_6)
 
         x = self.concat(x, x_1, x_2, x_3, x_6) # [4096, 32, 32]
